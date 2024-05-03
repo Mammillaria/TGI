@@ -670,14 +670,14 @@ $(function () {
 
         /**personal references fields */
         if (
-          $(".ind.slide2 #r1name").val() === "" ||
-          $(".ind.slide2 #r1relationship").val() === "" ||
-          $(".ind.slide2 #r1phone").val() === "" ||
-          $(".ind.slide2 #r1email").val() === "" ||
-          $(".ind.slide2 #r2name").val() === "" ||
-          $(".ind.slide2 #r2relationship").val() === "" ||
-          $(".ind.slide2 #r2phone").val() === "" ||
-          $(".ind.slide2 #r2email").val() === ""
+          $(".ind.slide2 #R1-Name").val() === "" ||
+          $(".ind.slide2 #R1-Relationship").val() === "" ||
+          $(".ind.slide2 #R1-Phone").val() === "" ||
+          $(".ind.slide2 #R1-Email").val() === "" ||
+          $(".ind.slide2 #R2-Name").val() === "" ||
+          $(".ind.slide2 #R2-Relationship").val() === "" ||
+          $(".ind.slide2 #R2-Phone").val() === "" ||
+          $(".ind.slide2 #R2-Email").val() === ""
         ) {
           refFilled = false;
           $(".vform_slide-container.ind.slide2 .form_error").removeClass(
