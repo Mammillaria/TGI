@@ -650,42 +650,42 @@ $(function () {
         /**personal info fields */
         if (
           $(".ind.slide2 #ifname").val() === "" ||
-          $(".ind.slide3 #ilname").val() === "" ||
-          $(".ind.slide3 #idob").val() === "" ||
+          $(".ind.slide2 #ilname").val() === "" ||
+          $(".ind.slide2 #idob").val() === "" ||
           $(".ind.slide2 #istreet").val() === "" ||
-          $(".ind.slide3 #icity").val() === "" ||
-          $(".ind.slide3 #istate").val() === "" ||
-          $(".ind.slide3 #izip").val() === "" ||
-          $(".ind.slide3 #iphone").val() === "" ||
+          $(".ind.slide2 #icity").val() === "" ||
+          $(".ind.slide2 #istate").val() === "" ||
+          $(".ind.slide2 #izip").val() === "" ||
+          $(".ind.slide2 #iphone").val() === "" ||
           $(".ind.slide2 #iemail").val() === ""
         ) {
           persFilled = false;
-          $(".vform_slide-container.ind.slide3 .form_error").removeClass(
+          $(".vform_slide-container.ind.slide2 .form_error").removeClass(
             "hidden",
           );
         } else {
           persFilled = true;
-          $(".vform_slide-container.ind.slide3 .form_error").addClass("hidden");
+          $(".vform_slide-container.ind.slide2 .form_error").addClass("hidden");
         }
 
         /**personal references fields */
         if (
           $(".ind.slide2 #r1name").val() === "" ||
-          $(".ind.slide3 #r1relationship").val() === "" ||
-          $(".ind.slide3 #r1phone").val() === "" ||
+          $(".ind.slide2 #r1relationship").val() === "" ||
+          $(".ind.slide2 #r1phone").val() === "" ||
           $(".ind.slide2 #r1email").val() === "" ||
           $(".ind.slide2 #r2name").val() === "" ||
-          $(".ind.slide3 #r2relationship").val() === "" ||
-          $(".ind.slide3 #r2phone").val() === "" ||
+          $(".ind.slide2 #r2relationship").val() === "" ||
+          $(".ind.slide2 #r2phone").val() === "" ||
           $(".ind.slide2 #r2email").val() === ""
         ) {
           refFilled = false;
-          $(".vform_slide-container.ind.slide3 .form_error").removeClass(
+          $(".vform_slide-container.ind.slide2 .form_error").removeClass(
             "hidden",
           );
         } else {
           refFilled = true;
-          $(".vform_slide-container.ind.slide3 .form_error").addClass("hidden");
+          $(".vform_slide-container.ind.slide2 .form_error").addClass("hidden");
         }
 
         if (iEmployed) {
@@ -700,15 +700,15 @@ $(function () {
             $(".ind.slide3 #iposition").val() === "" ||
             $(".ind.slide2 #iduties").val() === "" ||
             $(".ind.slide2 #iemp-dates").val() === "" ||
-            $(".ind.slide3 #empphone").val() === ""
+            $(".ind.slide2 #empphone").val() === ""
           ) {
             empFilled = false;
-            $(".vform_slide-container.ind.slide3 .form_error").removeClass(
+            $(".vform_slide-container.ind.slide2 .form_error").removeClass(
               "hidden",
             );
           } else {
             empFilled = true;
-            $(".vform_slide-container.ind.slide3 .form_error").addClass(
+            $(".vform_slide-container.ind.slide2 .form_error").addClass(
               "hidden",
             );
           }
