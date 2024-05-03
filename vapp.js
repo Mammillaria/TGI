@@ -70,7 +70,7 @@ $(".form_prev,.form_next").click(function () {
 });
 
 function validateField(item) {
-  if (item.val().length > 1) {
+  if (item.val().length >= 1) {
     item.removeClass("invalid");
     item.addClass("valid");
   } else {
@@ -162,14 +162,11 @@ $indAgeRadios.on("change", (e) => {
     //  console.log("parent info is not required(no need to provide)");
     $(".vform_slide-container.ind.slide7 .minor").addClass("hidden");
     $(".vform_slide-container.ind.slide7 .minor #parent-name").removeClass(
-      "hidden",
-    );
+      "hidden");
     $(".vform_slide-container.ind.slide7 .minor #parent-phone").removeClass(
-      "hidden",
-    );
+      "hidden");
     $(".vform_slide-container.ind.slide7 .minor #parent-email").removeClass(
-      "hidden",
-    );
+      "hidden");
   }
 });
 
@@ -189,7 +186,7 @@ $indCommServ.on("change", (e) => {
     iCommServ = true;
     iCommServRequired = true;
     $(".vform_slide-container.ind.slide2 .comm-service").removeClass("hidden");
-  } else {
+  } else if (indCommServSelection === "no"){
     iCommServ = true;
     iCommServRequired = false;
     $(".vform_slide-container.ind.slide2 .comm-service").addClass("hidden");
@@ -217,7 +214,7 @@ $indEmployed.on("change", (e) => {
     iEmployed = true;
     iEmpRequired = true;
     $(".vform_slide-container.ind.slide2 .employment").removeClass("hidden");
-  } else {
+  } else if (indEmployed === "no") {
     iEmployed = true;
     iEmpRequired = false;
     $(".vform_slide-container.ind.slide2 .employment").addClass("hidden");
@@ -237,7 +234,7 @@ $iVolunteerOther.on("change", (e) => {
   }
 });
 
-/******* BELOW IS HAS NOT BEEN CHECKED **********/
+/******* BELOW HAS NOT BEEN CHECKED **********/
 
 //Group slide 7 Authorization
 const $gauth = $("input[type=checkbox][name=gauth]");
@@ -631,19 +628,18 @@ $(function () {
         var refFilled = false;
 
         if (iCommServRequired) {
-          if (
-            $(".ind.slide2 #icshours").val() === "" ||
-            $(".ind.slide3 #icsduedate").val() === "" ||
+          console.log("Comm service block" + "hours value=" +icshours + "due date=" + icsduedate + "Any special reqs?:" + icsreq + "certificate needed?:"+icsletter);
+          if ($(".ind.slide2 #icshours").val() === "" ||
+            $(".ind.slide2 #icsduedate").val() === "" ||
             $(".ind.slide2 #icsreq").val() === "" ||
-            !icsletter
-          ) {
+            !icsletter) {
             commServFilled = false;
-            $(".vform_slide-container.ind.slide3 .form_error").removeClass(
+            $(".vform_slide-container.ind.slide2 .form_error").removeClass(
               "hidden",
             );
           } else {
             commServFilled = true;
-            $(".vform_slide-container.ind.slide3 .form_error").addClass(
+            $(".vform_slide-container.ind.slide2 .form_error").addClass(
               "hidden",
             );
           }
